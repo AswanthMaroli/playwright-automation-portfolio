@@ -1,6 +1,6 @@
 ## Playwright Automation Portfolio (TypeScript)
 
-Production-grade Playwright + TypeScript automation framework designed as a **public portfolio** to impress senior engineers, QA leads, and hiring managers in under a minute.
+Production-grade Playwright + TypeScript automation framework designed as a **public portfolio** 
 
 The focus is on **architecture quality, maintainability, and real-world patterns**, not test volume.
 
