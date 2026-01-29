@@ -12,7 +12,7 @@ test.describe('Checkout form validation', () => {
     await inventoryPage.assertLoaded();
 
     await inventoryPage.addFirstItemToCart();
-    await checkoutPage.cart.openCart();
+    await inventoryPage.cart.openCart();
 
     await checkoutPage.startCheckout();
 

@@ -5,7 +5,7 @@ import { CheckoutPage } from '@pages/CheckoutPage';
 import { WaitUtils } from '@utils/waitUtils';
 import { AssertionUtils } from '@utils/assertionUtils';
 import { DataUtils } from '@utils/dataUtils';
-import { getEnvironmentConfig } from '@config/environments';
+import { getEnvironmentConfig } from '../config/environments';
 
 type PagesFixture = {
   loginPage: LoginPage;
@@ -39,10 +39,10 @@ export const test = base.extend<PagesFixture & UtilsFixture & EnvironmentFixture
   assertionUtils: async ({ page }, use) => {
     await use(new AssertionUtils(page));
   },
-  dataUtils: async ({}, use) => {
+  dataUtils: async ({}, use: (fixture: typeof DataUtils) => Promise<void>) => {
     await use(DataUtils);
   },
-  envConfig: async ({}, use) => {
+  envConfig: async ({}, use: (cfg: ReturnType<typeof getEnvironmentConfig>) => Promise<void>) => {
     await use(getEnvironmentConfig());
   },
 });

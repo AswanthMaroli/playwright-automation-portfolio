@@ -7,7 +7,7 @@ export class CartComponent {
   readonly cartIcon: Locator;
   readonly cartBadge: Locator;
 
-  constructor(private readonly page: Page) {
+  constructor(page: Page) {
     this.cartIcon = page.locator('.shopping_cart_link');
     this.cartBadge = page.locator('.shopping_cart_badge');
   }

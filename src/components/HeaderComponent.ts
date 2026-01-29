@@ -8,7 +8,7 @@ export class HeaderComponent {
   readonly burgerMenu: Locator;
   readonly logoutLink: Locator;
 
-  constructor(private readonly page: Page) {
+  constructor(page: Page) {
     this.title = page.locator('.app_logo');
     this.burgerMenu = page.locator('#react-burger-menu-btn');
     this.logoutLink = page.locator('#logout_sidebar_link');

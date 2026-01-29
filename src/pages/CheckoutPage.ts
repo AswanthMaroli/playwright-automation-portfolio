@@ -21,7 +21,7 @@ export class CheckoutPage {
   private readonly wait: WaitUtils;
   private readonly assertions: AssertionUtils;
 
-  constructor(private readonly page: Page) {
+  constructor(page: Page) {
     this.cartItem = page.locator('.cart_item');
     this.checkoutButton = page.locator('[data-test="checkout"]');
 

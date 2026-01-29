@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from '@playwright/test';
 import { WaitUtils } from '@utils/waitUtils';
 import { AssertionUtils } from '@utils/assertionUtils';
-import { getEnvironmentConfig } from '@config/environments';
+import { getEnvironmentConfig } from '../config/environments';
 
 export class LoginPage {
   readonly usernameInput: Locator;
